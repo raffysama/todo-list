@@ -38,7 +38,7 @@ function TodoList({ todos, setTodos, statusTodos }) {
           </div>
       </div>
       <div>
-        {todos.length < 1 ? (<p className='text-lime-100 text-2xl'>No list of todo...</p>
+        {todos.length < 1 ? (<p className='text-lime-100 text-2xl'>No todos available.</p>
         ):(
           statusTodos.map((todo) => (
             <ul className='text-left mb-4 relative' key={todo.id}>
