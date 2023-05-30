@@ -42,7 +42,7 @@ function TodoList({ todos, setTodos, statusTodos }) {
         ):(
           statusTodos.map((todo) => (
             <ul className='text-left mb-4 relative' key={todo.id}>
-              <li className={`w-full rounded-md border-gray-200 px-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 dark:text-white bg-gray-950 py-3 pl-5
+              <li className={`w-full rounded-md border-gray-200 px-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 text-white bg-gray-950 py-3 pl-5
                 ${todo.status ? 'dark:bg-gray-900' : ''}`}>
                 {todo.text}
               </li>                
