@@ -23,7 +23,6 @@ function TodoList({ todos, setTodos, statusTodos }) {
   };
 
   const completedCount = todos.filter((todo) => todo.status).length;
-
   const unCompletedCount = todos.filter((todo) => !todo.status).length;
 
   return (

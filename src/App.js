@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App bg-slate-950">
       <div className="container mx-auto max-w-lg mt-10 px-4">
-        <h1 className='text-left text-orange-200 text-4xl font-semibold mb-5'>What's your plan for today ?</h1>
+        <h1 className='text-left text-orange-200 text-4xl font-semibold mb-5'>Any plan for today ?</h1>
         <Form 
           setInputText={setInputText} 
           todos={todos} 
