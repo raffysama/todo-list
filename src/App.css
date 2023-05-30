@@ -1,5 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
+}
+
+html{
+  background-color: rgb(2 6 23);
 }
 
 .App-logo {
