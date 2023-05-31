@@ -50,8 +50,8 @@ function App() {
 
 
   return (
-    <div className="App background-color: rgb(8, 11, 24);">
-      <div className="container mx-auto max-w-2xl mt-10 px-4">
+    <div className="App bg-slate-950">
+      <div className="container mx-auto max-w-2xl mt-10 px-4 bg-gray-900 border-gray-950 shadow-lg border-1 p-10">
         <h1 className='text-left text-orange-200 text-4xl font-semibold mb-5'>Any plan for today ?</h1>
         <Form 
           setInputText={setInputText} 
