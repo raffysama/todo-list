@@ -63,12 +63,12 @@ function TodoList({ todos, setTodos, statusTodos }) {
           </div>
           <div className='flex mt-8'>
           <p className='mr-10 text-green-500'>Completed: {completedCount}</p>
-          <p className='text-rose-400'>Incomplete: {unCompletedCount}</p>
+          <p className='text-rose-400'>Pending: {unCompletedCount}</p>
           </div>
       </div>
       <div>
       {todos.length < 1 ? (
-  <p className='text-lime-100 text-2xl'>No todos available.</p>
+      <p className='text-lime-100 text-2xl'>No todos available.</p>
       ) : (
             isEditing ? <EditTodo
             todoId={editTodoId}
