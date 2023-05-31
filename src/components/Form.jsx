@@ -1,7 +1,7 @@
 import React from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-function Form({setInputText,setTodos,todos,inputText,setStatus,setStatusTodos}) {
+function Form({setInputText,setTodos,todos,inputText,setStatus}) {
 
     const changeHandler = (e) =>{
         setInputText(e.target.value)
@@ -17,6 +17,7 @@ function Form({setInputText,setTodos,todos,inputText,setStatus,setStatusTodos}) 
               id: uuidv4(),
               text: inputText,
               status: false,
+              isEditing: false
             },
           ]);
           setInputText('');
