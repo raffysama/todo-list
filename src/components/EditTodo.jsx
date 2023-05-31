@@ -1,13 +1,19 @@
 import React, { useState } from 'react';
 
-function EditTodo({ todoId, todoText, onSaveEdit, onCancelEdit }) {
+function EditTodo({  todoText, onSaveEdit, onCancelEdit }) {
   const [editedText, setEditedText] = useState(todoText);
+  const [alert, setAlert] = useState(false);
 
   const handleInputChange = (e) => {
+ 
     setEditedText(e.target.value);
   };
 
   const handleSave = () => {
+    if (!editedText || /^\s*$/.test(editedText)) {
+        setAlert(true);
+        return
+      }
     onSaveEdit(editedText);
   };
 
@@ -16,7 +22,11 @@ function EditTodo({ todoId, todoText, onSaveEdit, onCancelEdit }) {
   };
 
   return (
+
     <div className='text-left mb-4 relative'>
+        {alert && (<div className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4 mb-10" role="alert">
+            <p>Please enter a valid todo text.</p>
+            </div>)}
       <textarea
         className='w-full rounded-md border-gray-200 px-5 shadow-sm dark:border-gray-700 dark:bg-gray-800 text-white bg-gray-950 py-3 pl-5'
         value={editedText}
